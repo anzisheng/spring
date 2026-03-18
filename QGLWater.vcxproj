@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2AF31618-6D04-3BE4-8BDF-4505F8A64124}</ProjectGuid>
+    <RootNamespace>QGLWater</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.26100.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>build\x64\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\x64\objs\obj\</IntermediateDirectory>
+    <PrimaryOutput>QGLWater</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>build\x64\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\x64\objs\obj\</IntermediateDirectory>
+    <PrimaryOutput>QGLWater</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2022_32</QtInstall>
+    <QtModules>core;gui;network;widgets;concurrent;printsupport;sql</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2022_32</QtInstall>
+    <QtModules>core;gui;network;widgets;concurrent;printsupport;sql</QtModules>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\x64\objs\obj\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QGLWater</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\x64\objs\obj\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QGLWater</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;ext\FMOD\inc;vendors\qcustomplot;build\x64\objs\moc;build\x64\objs\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\x64\objs\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>build\x64\objs\obj\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\ext\FMOD\lib\x64\fmod_vc.lib";winmm.lib;$(QTDIR)\lib\Qt6EntryPoint.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\ext\FMOD\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\QGLWater.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist build\x64 mkdir build\x64 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y .\dark.qss build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /E /I /Y .\cfgtemp\* build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\yaml-cpp\x64\bin\yaml-cpp.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedcrypto.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedtls.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedx509.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y ext\FMOD\lib\x64\fmod.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe 
+if errorlevel 1 goto VCEnd
+</Command>
+      <Message>if not exist build\x64 mkdir build\x64 
+xcopy /D /Y .\dark.qss build\x64\ 
+xcopy /D /E /I /Y .\cfgtemp\* build\x64\ 
+xcopy /D /Y vendors\yaml-cpp\x64\bin\yaml-cpp.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedcrypto.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedtls.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedx509.dll build\x64\ 
+xcopy /D /Y ext\FMOD\lib\x64\fmod.dll build\x64\ 
+$(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe 
+</Message>
+    </PostBuildEvent>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>D:/SCR/QGLWater-Src-2026-01-16_SL40 - Clock/Src-2026-01-16/build/$(Platform)/objs/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\$(Platform)\objs\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\$(Platform)\objs\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;ext\FMOD\inc;vendors\qcustomplot;build\x64\objs\moc;build\x64\objs\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\x64\objs\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>build\x64\objs\obj\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\ext\FMOD\lib\x64\fmod_vc.lib";winmm.lib;$(QTDIR)\lib\Qt6EntryPointd.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\ext\FMOD\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\QGLWater.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist build\x64 mkdir build\x64 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y .\dark.qss build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /E /I /Y .\cfgtemp\* build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\yaml-cpp\x64\bin\yaml-cpp.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedcrypto.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedtls.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedx509.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+xcopy /D /Y ext\FMOD\lib\x64\fmodL.dll build\x64\ 
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe 
+if errorlevel 1 goto VCEnd
+</Command>
+      <Message>if not exist build\x64 mkdir build\x64 
+xcopy /D /Y .\dark.qss build\x64\ 
+xcopy /D /E /I /Y .\cfgtemp\* build\x64\ 
+xcopy /D /Y vendors\yaml-cpp\x64\bin\yaml-cpp.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedcrypto.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedtls.dll build\x64\ 
+xcopy /D /Y vendors\mbedtls\x64\lib\mbedx509.dll build\x64\ 
+xcopy /D /Y ext\FMOD\lib\x64\fmodL.dll build\x64\ 
+$(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe 
+</Message>
+    </PostBuildEvent>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>D:/SCR/QGLWater-Src-2026-01-16_SL40 - Clock/Src-2026-01-16/build/$(Platform)/objs/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\$(Platform)\objs\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\$(Platform)\objs\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Refactor\Audio\AudioPlayer.cpp" />
+    <ClCompile Include="ClockDialog.cpp" />
+    <ClCompile Include="CollidingRectItem.cpp" />
+    <ClCompile Include="CutSolidVerticalLine.cpp" />
+    <ClCompile Include="DMXLightDialog.cpp" />
+    <ClCompile Include="DominoSetting.cpp" />
+    <ClCompile Include="ElecDeviceRectItem.cpp" />
+    <ClCompile Include="ElecDeviceShowWidget.cpp" />
+    <ClCompile Include="Refactor\Audio\FmodAudioPlayer.cpp" />
+    <ClCompile Include="MovableVerticalLine.cpp" />
+    <ClCompile Include="MusicGraphicsView.cpp" />
+    <ClCompile Include="MusicWidget.cpp" />
+    <ClCompile Include="OrbitDialog.cpp" />
+    <ClCompile Include="ProgramControl.cpp" />
+    <ClCompile Include="QDeviceInfoDialog.cpp" />
+    <ClCompile Include="QFileHelper.cpp" />
+    <ClCompile Include="QOutPutDialog.cpp" />
+    <ClCompile Include="QShowTeamsDialog.cpp" />
+    <ClCompile Include="QSubTreeView.cpp" />
+    <ClCompile Include="QTreeItem.cpp" />
+    <ClCompile Include="QTreeMode.cpp" />
+    <ClCompile Include="SelectImageDialog.cpp" />
+    <ClCompile Include="StaticValue.cpp" />
+    <ClCompile Include="addquedialog.cpp" />
+    <ClCompile Include="aosetting.cpp" />
+    <ClCompile Include="dialoglogindraw.cpp" />
+    <ClCompile Include="drawprodialog.cpp" />
+    <ClCompile Include="drawtabledialog.cpp" />
+    <ClCompile Include="editiddialog.cpp" />
+    <ClCompile Include="heartbeat.cpp" />
+    <ClCompile Include="ipadimagesetdialog.cpp" />
+    <ClCompile Include="lineitem.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="myitem.cpp" />
+    <ClCompile Include="ontimesetdialog.cpp" />
+    <ClCompile Include="ouputViewer.cpp" />
+    <ClCompile Include="pingthread.cpp" />
+    <ClCompile Include="playtiming.cpp" />
+    <ClCompile Include="vendors\qcustomplot\qcustomplot.cpp" />
+    <ClCompile Include="remotedlg.cpp" />
+    <ClCompile Include="senddatathread.cpp" />
+    <ClCompile Include="spectrumwidget.cpp" />
+    <ClCompile Include="Model\Track\track.cpp" />
+    <ClCompile Include="winperformance.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Refactor\Audio\AudioPlayer.h" />
+    <QtMoc Include="ClassDefined.h" />
+    <QtMoc Include="ClockDialog.h" />
+    <QtMoc Include="CollidingRectItem.h" />
+    <ClInclude Include="CommonFile.h" />
+    <QtMoc Include="CutSolidVerticalLine.h" />
+    <QtMoc Include="DMXLightDialog.h" />
+    <QtMoc Include="DominoSetting.h" />
+    <QtMoc Include="ElecDeviceRectItem.h" />
+    <QtMoc Include="ElecDeviceShowWidget.h" />
+    <ClInclude Include="Refactor\Audio\FmodAudioPlayer.h" />
+    <ClInclude Include="LockCode.h" />
+    <QtMoc Include="MovableVerticalLine.h" />
+    <QtMoc Include="MusicGraphicsView.h" />
+    <QtMoc Include="MusicWidget.h" />
+    <QtMoc Include="OrbitDialog.h" />
+    <QtMoc Include="ProgramControl.h" />
+    <QtMoc Include="QDeviceInfoDialog.h" />
+    <QtMoc Include="QFileHelper.h" />
+    <QtMoc Include="QOutPutDialog.h" />
+    <QtMoc Include="QShowTeamsDialog.h" />
+    <QtMoc Include="QSubTreeView.h" />
+    <ClInclude Include="QTreeItem.h" />
+    <QtMoc Include="QTreeMode.h" />
+    <QtMoc Include="SelectImageDialog.h" />
+    <QtMoc Include="StaticValue.h" />
+    <QtMoc Include="addquedialog.h" />
+    <QtMoc Include="aosetting.h" />
+    <QtMoc Include="dialoglogindraw.h" />
+    <QtMoc Include="drawprodialog.h" />
+    <QtMoc Include="drawtabledialog.h" />
+    <QtMoc Include="editiddialog.h" />
+    <ClInclude Include="globalparams.h" />
+    <QtMoc Include="heartbeat.h" />
+    <QtMoc Include="ipadimagesetdialog.h" />
+    <ClInclude Include="lineitem.h" />
+    <QtMoc Include="mainwindow.h" />
+    <QtMoc Include="myitem.h" />
+    <QtMoc Include="ontimesetdialog.h" />
+    <QtMoc Include="ouputViewer.h" />
+    <QtMoc Include="pingthread.h" />
+    <QtMoc Include="playtiming.h" />
+    <QtMoc Include="vendors\qcustomplot\qcustomplot.h" />
+    <QtMoc Include="remotedlg.h" />
+    <QtMoc Include="senddatathread.h" />
+    <QtMoc Include="spectrumwidget.h" />
+    <ClInclude Include="Model\Track\track.h" />
+    <QtMoc Include="winperformance.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ClockDialog.ui" />
+    <QtUic Include="DMXLightDialog.ui" />
+    <QtUic Include="DominoSetting.ui" />
+    <QtUic Include="ElecDeviceShowWidget.ui" />
+    <QtUic Include="OrbitDialog.ui" />
+    <QtUic Include="ProgramControl.ui" />
+    <QtUic Include="QDeviceInfoDialog.ui" />
+    <QtUic Include="QOutPutDialog.ui" />
+    <QtUic Include="QShowTeamsDialog.ui" />
+    <QtUic Include="SelectImageDialog.ui" />
+    <QtUic Include="addquedialog.ui" />
+    <QtUic Include="aosetting.ui" />
+    <QtUic Include="dialoglogindraw.ui" />
+    <QtUic Include="drawprodialog.ui" />
+    <QtUic Include="drawtabledialog.ui" />
+    <QtUic Include="editiddialog.ui" />
+    <QtUic Include="heartbeat.ui" />
+    <QtUic Include="ipadimagesetdialog.ui" />
+    <QtUic Include="mainwindow.ui" />
+    <QtUic Include="ontimesetdialog.ui" />
+    <QtUic Include="ouputViewer.ui" />
+    <QtUic Include="playtiming.ui" />
+    <QtUic Include="remotedlg.ui" />
+    <QtUic Include="spectrumwidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dark.qss" />
+    <None Include="C:\Users\Emma\Desktop\icon1~2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\QGLWater_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

@@ -1,0 +1,183 @@
+/* Global */
+QWidget {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+}
+QDialog, QMainWindow, QFrame, QGroupBox {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+}
+QToolTip {
+    background-color: #2d2d30;
+    color: #dcdcdc;
+    border: 1px solid #3a3d41;
+}
+
+/* Menu */
+QMenuBar, QMenu {
+    background-color: #252526;
+    color: #dcdcdc;
+}
+QMenu::item:selected {
+    background-color: #3a3d41;
+}
+
+/* Tool/Status */
+QToolBar {
+    background-color: #2d2d30;
+    border: 1px solid #3a3d41;
+}
+QStatusBar {
+    background-color: #2d2d30;
+    color: #dcdcdc;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #3a3d41;
+    border: 1px solid #555555;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+QPushButton:hover {
+    background-color: #444444;
+}
+QPushButton:pressed {
+    background-color: #2d2d30;
+}
+
+/* Inputs */
+QLineEdit, QTextEdit, QPlainTextEdit, QSpinBox, QDoubleSpinBox,
+QComboBox, QDateTimeEdit, QTimeEdit, QDateEdit {
+    background-color: #252526;
+    border: 1px solid #555555;
+    color: #dcdcdc;
+    selection-background-color: #0078d7;
+}
+QComboBox::drop-down {
+    border: 0;
+}
+QComboBox QAbstractItemView {
+    background-color: #252526;
+    color: #dcdcdc;
+    selection-background-color: #0078d7;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #3a3d41;
+}
+QTabBar::tab {
+    background: #2d2d30;
+    color: #dcdcdc;
+    padding: 6px 10px;
+    border: 1px solid #3a3d41;
+    border-bottom: none;
+}
+QTabBar::tab:selected {
+    background: #1e1e1e;
+}
+
+/* Views */
+QTreeView, QListView, QTableView {
+    background-color: #1e1e1e;
+    alternate-background-color: #252526;
+    color: #dcdcdc;
+    gridline-color: #3a3d41;
+}
+QTreeView#leftTreeView {
+    background-color: #f5f5f5;
+    alternate-background-color: #ffffff;
+    color: #000000;
+    selection-background-color: #cce8ff;
+    selection-color: #000000;
+    border: 1px solid #c0c0c0;
+}
+QTreeView#leftTreeView::item {
+    padding: 4px 6px;
+}
+QTreeView#leftTreeView::item:selected {
+    background-color: #cce8ff;
+    color: #000000;
+}
+QTreeView#leftTreeView QHeaderView::section {
+    background-color: #f0f0f0;
+    color: #000000;
+    border: 1px solid #c0c0c0;
+}
+QHeaderView::section {
+    background-color: #2d2d30;
+    color: #dcdcdc;
+    border: 1px solid #3a3d41;
+    padding: 4px;
+}
+
+/* Scrollbar */
+QScrollBar:vertical {
+    background: #2d2d30;
+    width: 12px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #3a3d41;
+    min-height: 20px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar:horizontal {
+    background: #2d2d30;
+    height: 12px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #3a3d41;
+    min-width: 20px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* Slider/Progress */
+QSlider::groove:horizontal {
+    height: 4px;
+    background: #3a3d41;
+}
+QSlider::handle:horizontal {
+    background: #dcdcdc;
+    width: 12px;
+    margin: -4px 0;
+    border-radius: 2px;
+}
+QProgressBar {
+    border: 1px solid #3a3d41;
+    background: #252526;
+    color: #dcdcdc;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: #0078d7;
+}
+
+/* Check/Radio */
+QCheckBox::indicator, QRadioButton::indicator {
+    background: #2d2d30;
+    border: 1px solid #555555;
+}
+QCheckBox::indicator:checked, QRadioButton::indicator:checked {
+    background: #0078d7;
+}
+
+/* Graphics */
+QGraphicsView {
+    background-color: #eef2f7;
+    border: 1px solid #3a3d41;
+}
+QCustomPlot {
+    background-color: #1e1e1e;
+}
+
+/* Splitter */
+QSplitter::handle {
+    background: #2d2d30;
+}

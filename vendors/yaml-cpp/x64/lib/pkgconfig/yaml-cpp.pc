@@ -1,0 +1,11 @@
+prefix=D:/workspace/vendors/public/yaml-cpp/x64
+exec_prefix=${prefix}
+includedir=D:/workspace/vendors/public/yaml-cpp/x64/include
+libdir=D:/workspace/vendors/public/yaml-cpp/x64/lib
+
+Name: Yaml-cpp
+Description: A YAML parser and emitter for C++
+Version: 0.8.0
+Requires:
+Libs: -L${libdir} -lyaml-cpp
+Cflags: -I${includedir}

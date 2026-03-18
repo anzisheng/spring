@@ -1,0 +1,11 @@
+prefix=D:/workspace/vendors/public/sACN/x86
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: EtcPal
+Description: ETC's Platform Abstraction Layer
+Version: 
+URL: https://github.com/ETCLabs/EtcPal
+Cflags: -I${includedir}
+Libs: -L${libdir} -lEtcPal
