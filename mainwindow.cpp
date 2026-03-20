@@ -1793,7 +1793,6 @@ void MainWindow::InitDomino(CollidingRectItem* item)
 }
 
 //旧的InitImageShow函数
-
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -1814,9 +1813,6 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 		delay_time = item->m_delay_time;
 		img_size = item->new_image.size();
 		last_image = item->new_image;
-
-
-
 	}
 	else
 	{

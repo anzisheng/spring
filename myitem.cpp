@@ -9,6 +9,7 @@ MyItem::MyItem(QRectF rect, QColor color, QGraphicsItem *parent)
 {
     m_boundRect = rect;
     m_Color = color;
+    //m_Show_Team_list = "0"; //anzs
 }
 
 QRectF MyItem::boundingRect() const

@@ -833,6 +833,7 @@ void MusicGraphicsView::always_on()
 	//crash fixed end
 	//先获取编队的ID
 	MyItem* show_team_item = (MyItem*)this->itemAt(m_triggerPos);
+	//MyItem* show_team_item = reinterpret_cast <MyItem*>(this->itemAt(m_triggerPos));
 	if (show_team_item)
 	{
 		QRectF action_rect;
@@ -948,7 +949,9 @@ void MusicGraphicsView::dominuo()
 	if (QDialog::Accepted == domino.exec())
 	{
 		//先获取编队的ID
-		MyItem* show_team_item = (MyItem*)this->itemAt(m_triggerPos);	//m_triggerPos鼠标点击点的坐标，返回编队信息(id号等）
+		// MyItem* show_team_item = (MyItem*)this->itemAt(m_triggerPos);	//m_triggerPos鼠标点击点//坐标，返回编队信息(id号等）
+		MyItem* show_team_item = reinterpret_cast <MyItem*>(this->itemAt(m_triggerPos));
+		//show_team_item->m_Show_Team_list = "0";
 		if (show_team_item)
 		{	//有效的id号，不是0
 			QRectF rect;
@@ -959,7 +962,7 @@ void MusicGraphicsView::dominuo()
 					(CollidingRectItem*)this->itemAt(m_triggerPos);
 				rect = rect_item->boundingRect();
 				show_team_item = (MyItem*)rect_item->parent();
-				show_team_id = show_team_item->id;
+ 				show_team_id = show_team_item->id;
 				if (rect_item)
 				{
 					deleteShowAction(rect_item);

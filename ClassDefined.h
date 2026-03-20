@@ -114,6 +114,8 @@ public:
 	bool bHasChange;				//数据有变化
 
 	QMap<int, int> m_delay_ms;		//延迟值（电气设备ID-延迟值）
+    //QMap<int, float> m_delay_ms;		//延迟值（电气设备ID-延迟值）
+
 };
 
 //设备信息
@@ -151,7 +153,8 @@ public:
     int pos_z;
     bool isDefault;
     int out_put_value;	//实际的输出值，0-255之间
-	int delayinms;		//延时值，单位ms
+    float delayinms;
+    //int delayinms;		//延时值，单位ms
 };
 
 class DMXState

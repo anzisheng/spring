@@ -565,7 +565,12 @@ void StaticValue::getDeviceInfo()
             device_info->pos_y = query.value(6).toInt();
             device_info->pos_z = query.value(7).toInt();
             device_info->isDefault = query.value(8).toBool();
-			device_info->delayinms = query.value(9).toInt();
+
+
+
+            device_info->delayinms = query.value(9).toInt();
+
+
 
 			m_output_device[out_put_key]->
 				m_delay_ms.insert(device_info->elec_device_id, device_info->delayinms);		//从数据库获得延时值

@@ -614,15 +614,16 @@ void QSubTreeView::newSL40()
 
 			out_put_device->port = 6000;							//板卡端口号
 			out_put_device->slotNum = waynum;						//板卡槽号，40
-			for (int i = 0; i < waynum; ++i)						//根据槽号设置子变量
+			//const int  Valve_Num =  120;
+			for (int i = 0; i <  waynum; ++i)						//根据槽号设置子变量
 			{
 				DeviceInfo* device_info = new DeviceInfo();
 				device_info->elec_device_id = i;
 				device_info->output_device_id = output_device_id;
 				device_info->name = tr("阀");					//名称：阀
 				device_info->type = tr("水帘阀");				//类型：水帘阀
-				device_info->delayinms = i+1;										//创建的时候缺省的延时值
 
+				
 				qStrSql = QString("insert into device_info(elec_device_id,"			//
 					"output_device_id,name,type,DelayInms) "
 					"values(%1,%2,'%3','%4','%5')").arg(device_info->elec_device_id).
@@ -639,9 +640,42 @@ void QSubTreeView::newSL40()
 				}
 				if (query.next())
 				{
-					device_info->id = query.value(0).toInt();									//设备号，第三个板子的第一个设备，81
+					device_info->id = query.value(0).toInt();									//设备号，第三个板子的第一个设备，81 //anzs
 					StaticValue::GetInstance()->m_device_map[device_info->id] = device_info;	//映射
 					out_put_device->m_mapping[i] = device_info->id;								//映射到m_mapping
+
+
+
+					////anzs code for delay time for each valve
+					const float Arc_Length = 3.0f;
+					const float Arc_Height = 2.0f;
+					const int   Valve_Num = 120;
+					const float Tank_Height = 0.36;
+					const float g = 9.8;
+					float flope = .0f;
+					const float deltaX = Arc_Length / (Valve_Num );
+					float height = .0f;
+					
+					if (device_info->id <= Valve_Num / 2)
+					{
+						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+						height = Tank_Height + flope * deltaX * (device_info->id);
+					}
+					else
+					if (device_info->id > Valve_Num / 2)
+					{
+						flope = (Tank_Height - Arc_Height ) / (Arc_Length/2   );
+						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num / 2);
+					}		
+																
+
+					float t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
+
+					device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
+
+
+
+
 
 					out_put_device->m_delay_ms[i] = device_info->delayinms;			//延时值，缺省初值都是0
 				}
