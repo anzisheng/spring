@@ -645,7 +645,7 @@ void QSubTreeView::newSL40()
 					StaticValue::GetInstance()->m_device_map[device_info->id] = device_info;	//映射
 					out_put_device->m_mapping[i] = device_info->id;								//映射到m_mapping
 
-					const float MAX = 639;
+					float MAX = 0.0f;
 
 					////anzs code for delay time for each valve
 					const float Arc_Length = 3.0f;
@@ -657,6 +657,15 @@ void QSubTreeView::newSL40()
 					const float deltaX = Arc_Length / (Valve_Num );
 					float height = .0f;
 					
+				    //弧形水箱，可以确定最高处在中间阀门处，即Valve_Num / 2处，延时应为0；
+					flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+					height = Tank_Height + flope * deltaX * (Valve_Num / 2);
+					float t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
+					MAX = round(t * 1000);
+					device_info->delayinms = 0;// round(t * 1000);
+
+
+
 					if (device_info->id <= Valve_Num / 2)
 					{
 						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
@@ -670,7 +679,7 @@ void QSubTreeView::newSL40()
 					}		
 																
 
-					float t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
+					 t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
 
 					device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
 
