@@ -581,6 +581,7 @@ void QSubTreeView::newSL40()
 		//			arg(qStrName);
 
 		//获得网络地址
+		
 		sIpAddrTemp = QString::number(size + 3);	//偏移量3，从3开始
 		sIpAddr = "192.168.1." + sIpAddrTemp;
 
@@ -644,7 +645,7 @@ void QSubTreeView::newSL40()
 					StaticValue::GetInstance()->m_device_map[device_info->id] = device_info;	//映射
 					out_put_device->m_mapping[i] = device_info->id;								//映射到m_mapping
 
-
+					const float MAX = 639;
 
 					////anzs code for delay time for each valve
 					const float Arc_Length = 3.0f;
@@ -673,6 +674,7 @@ void QSubTreeView::newSL40()
 
 					device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
 
+					device_info->delayinms = MAX - device_info->delayinms;
 
 
 
