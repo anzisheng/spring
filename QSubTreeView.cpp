@@ -616,6 +616,7 @@ void QSubTreeView::newSL40()
 			out_put_device->port = 6000;							//板卡端口号
 			out_put_device->slotNum = waynum;						//板卡槽号，40
 			//const int  Valve_Num =  120;
+			const int   Valve_Num = StaticValue::GetInstance()->m_SysConfig.value("VALVE_NUM").toInt();//120;
 			for (int i = 0; i <  waynum; ++i)						//根据槽号设置子变量
 			{
 				DeviceInfo* device_info = new DeviceInfo();
@@ -650,7 +651,8 @@ void QSubTreeView::newSL40()
 					////anzs code for delay time for each valve
 					const float Arc_Length = 3.0f;
 					const float Arc_Height = 2.0f;
-					const int   Valve_Num = 120;
+					
+
 					const float Tank_Height = 0.36;
 					const float g = 9.8;
 					float flope = .0f;
