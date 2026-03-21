@@ -1089,7 +1089,7 @@ void MainWindow::InitOutPutData(int iType)
     {
         CollidingRectItem* item = iter.value();
         int type = item->getType();     //type是编曲的命令种类
-		if (m_PlayTimeCount >= item->begin_time && m_PlayTimeCount <= item->end_time)
+		if (m_PlayTimeCount > item->begin_time && m_PlayTimeCount < item->end_time) // >=  -> >
         {   //
             item->setIsShowing(true);
             if(ALWAYS_ON == type)
