@@ -86,6 +86,11 @@ using namespace std;
 //#define  img_weigth    100
 #define  ipad_port     60000
 
+#define IF_TWIST (StaticValue::GetInstance()->m_SysConfig.value("TWIST").toInt() == 1)
+//{
+//#define if(IF_TWIST) （#define TWIST_IMAGE 1) else (#define TWIST_IMAGE 0)
+//}
+
 const QString mobiledomain  =   "http://www.thfountain.com";
 //const QString mobiledomain  =   "http://39.100.46.158";
 MainWindow::MainWindow(QWidget *parent) :
@@ -1791,9 +1796,245 @@ void MainWindow::InitDomino(CollidingRectItem* item)
 		}
 	}
 }
+//扭曲图像
+void MainWindow::InitImageShow(CollidingRectItem* item)
+{
 
+	int loop_times, delay_time;
+	QSize img_size;					//
+	//	int iHeartTime = m_HeartCount - item->begin_time;
+	int iHeartTime;
+
+	QList<QList<int>> show_teams = item->m_show_teams;	//当前表演编队
+	QImage last_image;
+	QSize sendimagesize;
+	int sendimagelooptimes;
+	int sendimage_perialtime;			//苹果图片的一次掉落时间
+
+	if (m_CtrlModeFlag == 0)
+	{
+		//不是收到了ipad发送的图片，正常表演
+		iHeartTime = m_PlayTimeCount - item->begin_time;	//
+		loop_times = item->m_loop_time;
+		delay_time = item->m_delay_time;
+		img_size = item->new_image.size();
+		last_image = item->new_image;
+	}
+	else
+	{
+		//收到了ipad发送的图片，ipad互动
+		//		if(CurrentJobID_!=-1)
+		//		{
+		//			qDebug()<<"prepare to end the mission!!!!!!!!!!!!!!!!!!!!!!!!!!";
+		//			m_CtrlModeFlag=0;
+		//			StatusToHTTP(CurrentJobID_,3);
+		//			CurrentJobID_   =   -1;
+		//			//之前有正在表演的手机图片，需要先结束掉
+		//		}
+		iHeartTime = m_PlayTimeCount - ipadimage_currtenttime;		//ipadimage_currtenttime是获得ipad图片的时刻
+		//		sendimagelooptimes = 5;
+		//		delay_time = 10;
+		sendimagelooptimes = StaticValue::GetInstance()->str_ipaimageTimes.toInt();		//掉落的次数
+		delay_time = StaticValue::GetInstance()->str_ipaimageDelayTime.toInt();			//间隔时间
+		last_image.loadFromData(last_image_array);						//获得图片数据
+		last_image = last_image.scaledToWidth(show_teams.size());		//缩放图片，宽度适配编组数量
+
+		sendimagesize = last_image.size();			//适配尺寸后图片的大小，应该是包含了宽度和高度信息？
+		//	img_size = last_image.size();
+		img_size = sendimagesize;					//和非ipad的普通图片一致起来，普通图片的长宽等尺寸信息也在img_size变量内
+		sendimage_perialtime = delay_time * (sendimagesize.height() - 1);	//ipad图片的一次掉落的所用时间
+	}
+
+	//以下操作普通图片和ipad图片是一样的
+	int perial_time = delay_time * (img_size.height() - 1);	//一个完整图片掉落的时长
+
+	//	int row_num = (iHeartTime%perial_time) / delay_time;	//图片的当前行 
+	int current_padimage_looptime = iHeartTime / (delay_time * (sendimagesize.height() - 1));		//ipad图片周期，已经掉落的次数
+	int current_loop_time = iHeartTime / (delay_time * (img_size.height() - 1));					//判断走了多少个周期
+	if (m_CtrlModeFlag == 0)
+	{
+		//普通普片的情况
+		if (current_loop_time >= loop_times && loop_times != -1)
+		{
+			stopTimer();
+			return;
+		}
+	}
+	else
+	{
+		//ipad的情况
+		qDebug() << "ipad图片周期" << current_padimage_looptime << "判断走了多少个周期" << current_loop_time;
+		if (current_padimage_looptime >= sendimagelooptimes && sendimagelooptimes != -1)
+		{
+			//远程控制图片播放完毕
+			m_CtrlModeFlag = 0;			//清除ipad有图片的标志
+			StatusToHTTP(CurrentJobID_, 3);
+			CurrentJobID_ = -1;
+			//	ipadimage_currtenttime=item->begin_time;
+			//	stopTimer();
+			return;
+		}
+	}
+
+	//	int row_num = (iHeartTime%perial_time) / delay_time;	//图片的当前行
+	//	int show_num = img_size.height() - row_num - 1;		//当前输出的图片的行号
+
+	//	if (iHeartTime % delay_time <= TIME_RES)
+	//	{
+			//每timeout一次就执行到这里一次，这个if没有啥用，屏蔽了没啥变化，估计对比值大于TIME_RES才有用
+		//	if (m_CtrlModeFlag == 1)
+		//	{
+				//	qDebug()<<"outer loop";
+		//		int i = 100;
+		//		++i;
+				//	qDebug()<<img_size;
+		//	}
+	const int   Valve_Num = StaticValue::GetInstance()->m_SysConfig.value("VALVE_NUM").toInt();//120;
+	float MAX = 0.0f;
+			//当前一行内，宽度上的点循环
+	for (int i = 0; i < img_size.width(); ++i)       //第二遍循环挂掉
+	{
+		QList<int> device_list = show_teams.at(i);
+
+		//根据图片的像素点，找到自己编队内的设备号
+		for (int k = 0; k < device_list.size(); ++k)	//device_list.size()的值是1，只对应一个像素点，可能多米诺跑动的会大于1
+		{
+			DeviceInfo* device_info = new DeviceInfo();
+			//找到i像素点对应的水阀ID
+			int device_id = device_list.at(k);		//设备号
+			int device_state = StaticValue::GetInstance()->m_device_map[device_id]->out_put_value;	//输出值
+			
+			
+			////anzs code for delay time for each valve
+			const float Arc_Length = 3.0f;
+			const float Arc_Height = 2.0f;
+
+
+			const float Tank_Height = 0.36;
+			const float g = 9.8;
+			float flope = .0f;
+			const float deltaX = Arc_Length / (Valve_Num);
+			float height = .0f;
+
+			//弧形水箱，可以确定最高处在中间阀门处，即Valve_Num / 2处，延时应为0；
+			flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+			height = Tank_Height + flope * deltaX * (Valve_Num / 2);
+			float t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
+			MAX = round(t * 1000);
+			device_info->delayinms = 0;// round(t * 1000);
+
+
+
+			if (device_info->id <= Valve_Num / 2)
+			{
+				flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+				height = Tank_Height + flope * deltaX * (device_info->id);
+			}
+			else
+				if (device_info->id > Valve_Num / 2)
+				{
+					flope = (Tank_Height - Arc_Height) / (Arc_Length / 2);
+					height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num / 2);
+				}
+
+
+			t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
+
+			//t = 0;// for 扭曲图像
+
+			device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
+			//device_info->delayinms = round(t * 1000)*1000;//i+1;										//为看效果，放大延迟量
+			device_info->delayinms = MAX - device_info->delayinms;
+
+
+
+
+			//out_put_device->m_delay_ms[i] = 0;// device_info->delayinms;			//延时值，缺省初值都是0
+
+			
+			
+			float PixelDelayInms = device_info->delayinms;// StaticValue::GetInstance()->m_device_map[device_id]->delayinms;	//延时值
+			//anzs for test 为了清晰可见
+			//PixelDelayInms *= 10;
+			//这段延迟时间内，像素数值方向移动的个数
+
+
+
+			double deltaY = 0.5 * 9.8 * (PixelDelayInms/1000) * (PixelDelayInms/1000);
+			int CurrentPixelTime = iHeartTime - PixelDelayInms;
+			if (CurrentPixelTime >= 0)
+			{
+				int row_num = (CurrentPixelTime % perial_time) / delay_time;	//图片的当前行
+				int show_num = img_size.height() - row_num - 1;				//当前输出的图片的行号，不是从0行输出，是从最大行开始输出，图片最底部
+				if (CurrentPixelTime % delay_time <= TIME_RES)
+				{
+					if (QColor(last_image.pixel(k, show_num)) == Qt::black)		//感觉这里的i应该是变量k
+					{
+						//图形像素点为黑，图形非空白处的意思
+						if (item->m_IsYangWen)
+						{	//阳文
+							if (device_state <= 0)   //此动作在关闭时，才将其打开，并改变设备状态，如果处于打开状态，那么不处理
+							{
+								StaticValue::GetInstance()->m_device_map[device_id]->out_put_value = 255;			//设置对应的设备为开
+								int output_device_id = StaticValue::GetInstance()->
+									m_device_map[device_id]->output_device_id;
+								StaticValue::GetInstance()->m_output_device[output_device_id]->bHasChange = true;	//数据有变化
+							}
+						}
+						else
+						{	//阴文
+							if (device_state > 0)
+							{
+								StaticValue::GetInstance()->m_device_map[device_id]->out_put_value = 0;
+								int output_device_id = StaticValue::GetInstance()->
+									m_device_map[device_id]->output_device_id;
+								StaticValue::GetInstance()->m_output_device[output_device_id]->bHasChange = true;
+							}
+						}
+					}
+					//	else if(QColor(item->new_image.pixel(i,show_num)) == Qt::white)
+					else if (QColor(last_image.pixel(k, show_num)) == Qt::white)
+					{
+						//图片像素点为白，空白处的意思
+						if (item->m_IsYangWen)
+						{	//阳文
+							if (device_state > 0)
+							{
+								StaticValue::GetInstance()->m_device_map[device_id]->out_put_value = 0;
+								int output_device_id = StaticValue::GetInstance()->
+									m_device_map[device_id]->output_device_id;
+								StaticValue::GetInstance()->m_output_device[output_device_id]->bHasChange = true;
+							}
+						}
+						else
+						{	//阴文
+							if (device_state <= 0)
+							{
+								StaticValue::GetInstance()->m_device_map[device_id]->out_put_value = 255;
+								int output_device_id = StaticValue::GetInstance()->
+									m_device_map[device_id]->output_device_id;
+								StaticValue::GetInstance()->m_output_device[output_device_id]->bHasChange = true;
+							}
+						}
+					}
+				}
+				else
+				{
+					//	qDebug() << "i=" << i << ",iHeartTime=" << iHeartTime << ",PixelDelayInms=" << PixelDelayInms <<
+					//				",CurrentPixelTime=" << CurrentPixelTime << ",show_num=" << show_num << " 0";
+				}
+			}
+		}
+	}
+	//	}
+
+}
+
+
+
+
+/*
 //旧的InitImageShow函数
-
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -1951,7 +2192,7 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 		}
 	}
 }
-
+*/
 /*
 //新的InitImageShow函数，单像素延迟的版本，2025-12-30，有BUG
 void MainWindow::InitImageShow(CollidingRectItem* item)

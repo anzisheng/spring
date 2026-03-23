@@ -65,6 +65,7 @@ public:
     QMap<int,CollidingRectItem*> m_MusicActions;	//正在播放的表演动作列表
     QMap<int,int> m_device_state;					//电气设备的状态(所有电气设备的值，设备号-值)
     QMap<QString,QString> m_SysConfig;				//系统配置文件
+    //int TWIST_IMAGE;
 
     QString str_ipaimageW;				//ipad图片数据的宽度
     QString str_ipaimageH;				//ipad图片数据的高度

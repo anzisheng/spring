@@ -308,6 +308,9 @@ void StaticValue::updateMusicPath(int musicId, const QString &newMusicPath)
 void StaticValue::InitSysConfig()
 {
     m_SysConfig = QFileHelper::GetAllIniKeyValue("config.ini");
+
+    
+    
 }
 
 void StaticValue::getShowTamInfo()

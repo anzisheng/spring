@@ -114,6 +114,7 @@ private:
     void InitAlwaysOn(CollidingRectItem* item);
     void InitDomino(CollidingRectItem* item);
     void InitImageShow(CollidingRectItem* item);
+    void InitImageShow2(CollidingRectItem* item);
     void InitDMXShow(CollidingRectItem* item);
     void InitDMXDomino(CollidingRectItem *item, RouteInfo *route_info, QList<QList<int> > show_teams);
     void InitDMXOn(RouteInfo *route_info, QList<QList<int> > show_teams);

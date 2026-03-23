@@ -683,6 +683,8 @@ void QSubTreeView::newSL40()
 
 					 t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
 
+					 //t = 0;// for 扭曲图像
+
 					device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
 					//device_info->delayinms = round(t * 1000)*1000;//i+1;										//为看效果，放大延迟量
 					device_info->delayinms = MAX - device_info->delayinms;
@@ -690,7 +692,7 @@ void QSubTreeView::newSL40()
 
 
 
-					out_put_device->m_delay_ms[i] = device_info->delayinms;			//延时值，缺省初值都是0
+					out_put_device->m_delay_ms[i] = 0;// device_info->delayinms;			//延时值，缺省初值都是0
 				}
 			}
 			StaticValue::GetInstance()->m_output_device[out_put_device->id] = out_put_device;
