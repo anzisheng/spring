@@ -1793,7 +1793,7 @@ void MainWindow::InitDomino(CollidingRectItem* item)
 }
 
 //旧的InitImageShow函数
-/*
+
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -1951,10 +1951,9 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 		}
 	}
 }
-*/
 
+/*
 //新的InitImageShow函数，单像素延迟的版本，2025-12-30，有BUG
-
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -2059,6 +2058,8 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 				int device_id = device_list.at(k);		//设备号
 				int device_state = StaticValue::GetInstance()->m_device_map[device_id]->out_put_value;	//输出值
 				int PixelDelayInms = StaticValue::GetInstance()->m_device_map[device_id]->delayinms;	//延时值
+				//anzs for test 为了清晰可见
+				//PixelDelayInms *= 10;
 				int CurrentPixelTime = iHeartTime - PixelDelayInms;
 				if (CurrentPixelTime >= 0)
 				{
@@ -2126,7 +2127,7 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 		}
 //	}
 } 
-
+*/
 void MainWindow::InitDMXShow(CollidingRectItem* item)
 {
 	int iHeartTime = m_PlayTimeCount - item->begin_time;
