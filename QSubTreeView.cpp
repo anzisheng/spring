@@ -10,7 +10,7 @@
 #include "QTreeItem.h"
 #include "QTreeMode.h"
 #include "editiddialog.h"
-
+#include "config.h"
 QSubTreeView::QSubTreeView(QWidget *parent) :
 QTreeView(parent)
 {
@@ -615,6 +615,8 @@ void QSubTreeView::newSL40()
 
 			out_put_device->port = 6000;							//板卡端口号
 			out_put_device->slotNum = waynum;						//板卡槽号，40
+			
+
 			//const int  Valve_Num =  120;
 			const int   Valve_Num = StaticValue::GetInstance()->m_SysConfig.value("VALVE_NUM").toInt();//120;
 			for (int i = 0; i <  waynum; ++i)						//根据槽号设置子变量
@@ -689,18 +691,24 @@ void QSubTreeView::newSL40()
 					//device_info->delayinms = round(t * 1000)*1000;//i+1;										//为看效果，放大延迟量
 					device_info->delayinms = MAX - device_info->delayinms;
 
+					out_put_device->m_delay_ms[i] =  device_info->delayinms;			//延时值，缺省初值都是0
 
 
-
+#if INIT_IMAGE_SHOW == 3
 					out_put_device->m_delay_ms[i] = 0;// device_info->delayinms;			//延时值，缺省初值都是0
+#endif
+
 				}
 			}
+
+
 			StaticValue::GetInstance()->m_output_device[out_put_device->id] = out_put_device;
 
 			resetTreeView();
 			bReturn = true;
 		}
 	}
+
 END:
 	if (bReturn)
 	{
@@ -719,6 +727,7 @@ END:
 		else
 			qDebug() << tr("回滚灯光设备插入操作失败");
 	}
+
 }
 
 void QSubTreeView::newCanMain()

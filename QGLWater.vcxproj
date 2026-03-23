@@ -308,6 +308,7 @@ $(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe
     <QtMoc Include="DominoSetting.h" />
     <QtMoc Include="ElecDeviceRectItem.h" />
     <QtMoc Include="ElecDeviceShowWidget.h" />
+    <ClInclude Include="config.h" />
     <ClInclude Include="Refactor\Audio\FmodAudioPlayer.h" />
     <ClInclude Include="LockCode.h" />
     <QtMoc Include="MovableVerticalLine.h" />
