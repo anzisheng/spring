@@ -1,6 +1,7 @@
 # C++ objects and libs
 *.vsidx
-
+*.json
+/.*.json
 *.slo
 *.lo
 *.o

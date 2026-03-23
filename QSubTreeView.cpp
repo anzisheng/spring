@@ -684,7 +684,7 @@ void QSubTreeView::newSL40()
 					 t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
 
 					device_info->delayinms = round(t * 1000);//i+1;										//创建的时候缺省的延时值
-
+					//device_info->delayinms = round(t * 1000)*1000;//i+1;										//为看效果，放大延迟量
 					device_info->delayinms = MAX - device_info->delayinms;
 
 

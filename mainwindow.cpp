@@ -1793,6 +1793,7 @@ void MainWindow::InitDomino(CollidingRectItem* item)
 }
 
 //旧的InitImageShow函数
+/*
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -1950,10 +1951,10 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 		}
 	}
 }
-
+*/
 
 //新的InitImageShow函数，单像素延迟的版本，2025-12-30，有BUG
-/*
+
 void MainWindow::InitImageShow(CollidingRectItem* item)
 {
 	int loop_times, delay_time;
@@ -2124,7 +2125,7 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 			}
 		}
 //	}
-} */
+} 
 
 void MainWindow::InitDMXShow(CollidingRectItem* item)
 {
