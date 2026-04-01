@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CommonFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -108,7 +108,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -116,13 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "mainwindow.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeDocumentMoniker": "mainwindow.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeToolTip": "mainwindow.cpp",
-              "ViewState": "AgIAAAMHAAAAAAAAAAAawAwHAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAGYIAAAAAAAAAAAkwHIIAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-16T03:44:33.694Z",
               "EditorCaption": ""
@@ -154,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "config.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h",
               "RelativeDocumentMoniker": "config.h",
@@ -175,8 +175,7 @@
               "RelativeToolTip": "CommonFile.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-16T07:18:04.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T07:18:04.027Z"
             },
             {
               "$type": "Document",
@@ -222,7 +221,7 @@
               "RelativeDocumentMoniker": "QSubTreeView.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
               "RelativeToolTip": "QSubTreeView.cpp",
-              "ViewState": "AgIAAK0CAAAAAAAAAAAEwLACAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAKACAAAAAAAAAAAkwKMCAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-17T08:26:41.074Z",
               "EditorCaption": ""

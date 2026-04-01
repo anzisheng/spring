@@ -2031,7 +2031,7 @@ void MainWindow::InitImageShow(CollidingRectItem* item)
 
 	}
 	//	}
-#elif INIT_IMAGE_SHOW==2 //新的InitImageShow 方法
+#elif (INIT_IMAGE_SHOW==2  ||INIT_IMAGE_SHOW==4)//新的InitImageShow 方法
 {
 	int loop_times, delay_time;
 	QSize img_size;					//

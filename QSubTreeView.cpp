@@ -674,6 +674,7 @@ void QSubTreeView::newSL40()
 					MAX = round(t * 1000); //中心处的落下时间，附近的阀的落下时间肯定比他晚，即会有延迟。
 					device_info->delayinms = 0;// round(t * 1000);
 #if INIT_IMAGE_SHOW == 2
+					
 					if (device_info->id <= Valve_Num / 2)
 					{
 						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
@@ -685,10 +686,12 @@ void QSubTreeView::newSL40()
 						flope = (Tank_Height - Arc_Height ) / (Arc_Length/2   );
 						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num / 2);
 					}
+					
+					
 #endif
 					
 #if INIT_IMAGE_SHOW == 4
-					
+					//for test
 					if (device_info->id <= Valve_Num / 4) //|| ((device_info->id <= Valve_Num*3 / 4)&& (device_info->id > Valve_Num / 2)))
 					{
 						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
@@ -708,9 +711,12 @@ void QSubTreeView::newSL40()
 					else if ((device_info->id > Valve_Num * 3 / 4) && (device_info->id < Valve_Num))
 					{
 						flope = (Tank_Height - Arc_Height) / (Arc_Length / 2);
-						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num *3/ 4);
+						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num * 3 / 4);
 
-					}
+					}				
+					
+					
+					
 
 
 #endif
