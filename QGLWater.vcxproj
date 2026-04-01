@@ -73,6 +73,18 @@
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
     <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</PostBuildEventUseInBuild>
   </PropertyGroup>
+  <PropertyGroup Label="QtMocPreprocessDefines" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtMocPreprocessDefinesCommand>cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</QtMocPreprocessDefinesCommand>
+    <QtMocPreprocessDefinesInputs>$(QTDIR)\mkspecs\features\data\dummy.cpp</QtMocPreprocessDefinesInputs>
+    <QtMocPreprocessDefinesOutputs>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h</QtMocPreprocessDefinesOutputs>
+    <QtMocPreprocessDefinesMessage>Generate moc_predefs.h</QtMocPreprocessDefinesMessage>
+  </PropertyGroup>
+  <PropertyGroup Label="QtMocPreprocessDefines" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtMocPreprocessDefinesCommand>cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</QtMocPreprocessDefinesCommand>
+    <QtMocPreprocessDefinesInputs>$(QTDIR)\mkspecs\features\data\dummy.cpp</QtMocPreprocessDefinesInputs>
+    <QtMocPreprocessDefinesOutputs>D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h</QtMocPreprocessDefinesOutputs>
+    <QtMocPreprocessDefinesMessage>Generate moc_predefs.h</QtMocPreprocessDefinesMessage>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;ext\FMOD\inc;vendors\qcustomplot;build\x64\objs\moc;build\x64\objs\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -308,7 +320,6 @@ $(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe
     <QtMoc Include="DominoSetting.h" />
     <QtMoc Include="ElecDeviceRectItem.h" />
     <QtMoc Include="ElecDeviceShowWidget.h" />
-    <ClInclude Include="config.h" />
     <ClInclude Include="Refactor\Audio\FmodAudioPlayer.h" />
     <ClInclude Include="LockCode.h" />
     <QtMoc Include="MovableVerticalLine.h" />
@@ -348,19 +359,7 @@ $(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe
     <ClInclude Include="Model\Track\track.h" />
     <QtMoc Include="winperformance.h" />
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h.cbt">
-      <FileType>Document</FileType>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h;%(Outputs)</Outputs>
-    </CustomBuild>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <QtUic Include="ClockDialog.ui" />
     <QtUic Include="DMXLightDialog.ui" />

@@ -949,8 +949,8 @@ void MusicGraphicsView::dominuo()
 	if (QDialog::Accepted == domino.exec())
 	{
 		//先获取编队的ID
-		// MyItem* show_team_item = (MyItem*)this->itemAt(m_triggerPos);	//m_triggerPos鼠标点击点//坐标，返回编队信息(id号等）
-		MyItem* show_team_item = reinterpret_cast <MyItem*>(this->itemAt(m_triggerPos));
+		MyItem* show_team_item = (MyItem*)this->itemAt(m_triggerPos);	//m_triggerPos鼠标点击点//坐标，返回编队信息(id号等）
+		// MyItem* show_team_item = reinterpret_cast <MyItem*>(this->itemAt(m_triggerPos));
 		//show_team_item->m_Show_Team_list = "0";
 		if (show_team_item)
 		{	//有效的id号，不是0

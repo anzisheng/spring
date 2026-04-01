@@ -329,11 +329,7 @@
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\moc\moc_predefs.h.cbt">
-      <Filter>Generated Files</Filter>
-    </CustomBuild>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <QtUic Include="ClockDialog.ui">
       <Filter>Form Files</Filter>
@@ -418,10 +414,5 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\QGLWater_resource.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

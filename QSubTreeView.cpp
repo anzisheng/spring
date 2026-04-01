@@ -618,7 +618,10 @@ void QSubTreeView::newSL40()
 			
 
 			//const int  Valve_Num =  120;
-			const int   Valve_Num = StaticValue::GetInstance()->m_SysConfig.value("VALVE_NUM").toInt();//120;
+			int   Valve_Num = StaticValue::GetInstance()->m_SysConfig.value("VALVE_NUM").toInt();//120;
+//#if INIT_IMAGE_SHOW == 4
+				//Valve_Num /= 2;
+//#endif
 			for (int i = 0; i <  waynum; ++i)						//根据槽号设置子变量
 			{
 				DeviceInfo* device_info = new DeviceInfo();
@@ -651,25 +654,26 @@ void QSubTreeView::newSL40()
 					float MAX = 0.0f;
 
 					////anzs code for delay time for each valve
-					const float Arc_Length = 3.0f;
+					float Arc_Length = 3.0f;//弧长3米
+//#if INIT_IMAGE_SHOW == 4
+					//Arc_Length /= 2;
+//#endif
 					const float Arc_Height = 2.0f;
 					
 
 					const float Tank_Height = 0.36;
 					const float g = 9.8;
 					float flope = .0f;
-					const float deltaX = Arc_Length / (Valve_Num );
+					const float deltaX = Arc_Length / (Valve_Num ); //按照阀门个数将弧长均分
 					float height = .0f;
 					
 				    //弧形水箱，可以确定最高处在中间阀门处，即Valve_Num / 2处，延时应为0；
 					flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
 					height = Tank_Height + flope * deltaX * (Valve_Num / 2);
 					float t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
-					MAX = round(t * 1000);
+					MAX = round(t * 1000); //中心处的落下时间，附近的阀的落下时间肯定比他晚，即会有延迟。
 					device_info->delayinms = 0;// round(t * 1000);
-
-
-
+#if INIT_IMAGE_SHOW == 2
 					if (device_info->id <= Valve_Num / 2)
 					{
 						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
@@ -680,7 +684,37 @@ void QSubTreeView::newSL40()
 					{
 						flope = (Tank_Height - Arc_Height ) / (Arc_Length/2   );
 						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num / 2);
-					}		
+					}
+#endif
+					
+#if INIT_IMAGE_SHOW == 4
+					
+					if (device_info->id <= Valve_Num / 4) //|| ((device_info->id <= Valve_Num*3 / 4)&& (device_info->id > Valve_Num / 2)))
+					{
+						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+						height = Tank_Height + flope * deltaX * (device_info->id);
+					}
+					else if ((device_info->id > Valve_Num / 4) && (device_info->id <= Valve_Num / 2))
+					{
+						flope = (Tank_Height - Arc_Height) / (Arc_Length / 2);
+						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num / 4);
+
+					}
+					else if ((device_info->id <= Valve_Num * 3 / 4) && (device_info->id > Valve_Num / 2))//(((device_info->id > Valve_Num / 4)&&(device_info->id < Valve_Num / 2)) ||  ((device_info->id > Valve_Num *3/ 4) && (device_info->id < Valve_Num )))
+					{
+						flope = (Arc_Height - Tank_Height) / (Arc_Length / 2); // 斜率，用斜线拟合弧形 deltaY/deltaX
+						height = Tank_Height + flope * deltaX * (device_info->id - Valve_Num / 2);
+					}
+					else if ((device_info->id > Valve_Num * 3 / 4) && (device_info->id < Valve_Num))
+					{
+						flope = (Tank_Height - Arc_Height) / (Arc_Length / 2);
+						height = Arc_Height + flope * deltaX * (device_info->id - Valve_Num *3/ 4);
+
+					}
+
+
+#endif
+
 																
 
 					 t = sqrt(2 * height / g);//自由落体到地面的时间 t = sqrt(2*height/g)
@@ -692,9 +726,9 @@ void QSubTreeView::newSL40()
 					device_info->delayinms = MAX - device_info->delayinms;
 
 					out_put_device->m_delay_ms[i] =  device_info->delayinms;			//延时值，缺省初值都是0
+					
 
-
-#if INIT_IMAGE_SHOW == 3
+#if INIT_IMAGE_SHOW == 3 || INIT_IMAGE_SHOW == 1
 					out_put_device->m_delay_ms[i] = 0;// device_info->delayinms;			//延时值，缺省初值都是0
 #endif
 
