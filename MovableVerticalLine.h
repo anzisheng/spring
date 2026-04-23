@@ -1,4 +1,6 @@
-﻿#include <QGraphicsItem>
+﻿#pragma once
+#include <QGraphicsItem>
+
 #include <QPainter>
 #include <QGraphicsLineItem>
 #include <QGraphicsSimpleTextItem>

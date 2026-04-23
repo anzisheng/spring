@@ -65,8 +65,13 @@ CMakeLists.txt.user*
 *.bmp
 *.qm
 *.zip
-/build
+/build/
 /debug
 /release
 
-/.vs
+/.vs/
+/.qtcreator
+out/
+.vs/
+build/
+.vs/*.*
