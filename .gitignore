@@ -69,9 +69,12 @@ CMakeLists.txt.user*
 /debug
 /release
 
-/.vs/
-/.qtcreator
+.vs/
+.qtcreator/
 out/
 .vs/
 build/
 .vs/*.*
+*.pro
+*.filer
+*.vcproj

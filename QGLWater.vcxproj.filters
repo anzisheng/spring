@@ -116,6 +116,9 @@
     <ClCompile Include="StaticValue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WaterCurtainWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="addquedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -260,6 +263,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="StaticValue.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WaterCurtainWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="addquedialog.h">

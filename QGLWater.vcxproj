@@ -286,6 +286,7 @@ $(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe
     <ClCompile Include="QTreeMode.cpp" />
     <ClCompile Include="SelectImageDialog.cpp" />
     <ClCompile Include="StaticValue.cpp" />
+    <ClCompile Include="WaterCurtainWidget.cpp" />
     <ClCompile Include="addquedialog.cpp" />
     <ClCompile Include="aosetting.cpp" />
     <ClCompile Include="dialoglogindraw.cpp" />
@@ -336,6 +337,7 @@ $(QTDIR)\bin\windeployqt.exe --compiler-runtime build\x64\QGLWater.exe
     <QtMoc Include="QTreeMode.h" />
     <QtMoc Include="SelectImageDialog.h" />
     <QtMoc Include="StaticValue.h" />
+    <QtMoc Include="WaterCurtainWidget.h" />
     <QtMoc Include="addquedialog.h" />
     <QtMoc Include="aosetting.h" />
     <QtMoc Include="dialoglogindraw.h" />

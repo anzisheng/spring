@@ -33,6 +33,7 @@
 #include "pingthread.h"
 
 #include "winperformance.h"
+#include "WaterCurtainWidget.h"
 
 #pragma execution_character_set("utf-8")
 class ElecDeviceShowWidget;
@@ -237,7 +238,7 @@ private:
     QMap<int,ElecDeviceRectItem*> m_elecDeviceMap;  //电气设备显示列表
 
     ElecDeviceShowWidget* m_elec_show;     //电气设备和灯光设备展示窗体
-    ElecDeviceShowWidget* m_3D_show;
+    WaterCurtainWidget* m_3D_show;
 
     int screen_width;
     int screen_height;

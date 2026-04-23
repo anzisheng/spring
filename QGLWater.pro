@@ -73,6 +73,7 @@ SOURCES += main.cpp\
     senddatathread.cpp \
     winperformance.cpp \
     editiddialog.cpp \
+    WaterCurtainWidget.cpp \
     Refactor/Audio/AudioPlayer.cpp \
     Refactor/Audio/FmodAudioPlayer.cpp
 
@@ -122,6 +123,7 @@ HEADERS  += mainwindow.h \
     senddatathread.h \
     winperformance.h \
     editiddialog.h \
+    WaterCurtainWidget.h\
     Refactor/Audio/AudioPlayer.h \
     Refactor/Audio/FmodAudioPlayer.h
 

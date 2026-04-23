@@ -79,6 +79,7 @@
 #include "pingthread.h"
 #include <QLabel>
 #include "senddatathread.h"
+#include "WaterCurtainWidget.h"
 
 #pragma execution_character_set("utf-8")
 using namespace std;
@@ -587,7 +588,7 @@ void MainWindow::InitElecDeviceInfo()
 	m_tabWidget->addTab(m_elec_show, tr("电气设备"));
 //	connect(m_elec_show,&ElecDeviceShowWidget::RectItemClicked,this,ElecDevItemClicked);
 	connect(m_elec_show,SIGNAL(ElecDeviceShowWidget::RectItemClicked()),this,SLOT(ElecDevItemClicked));
-	m_3D_show = new ElecDeviceShowWidget();
+	m_3D_show = new WaterCurtainWidget(this);
 	m_tabWidget->addTab(m_3D_show, tr("3D 显示"));
 }
 
