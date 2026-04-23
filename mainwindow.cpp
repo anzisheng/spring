@@ -587,6 +587,8 @@ void MainWindow::InitElecDeviceInfo()
 	m_tabWidget->addTab(m_elec_show, tr("电气设备"));
 //	connect(m_elec_show,&ElecDeviceShowWidget::RectItemClicked,this,ElecDevItemClicked);
 	connect(m_elec_show,SIGNAL(ElecDeviceShowWidget::RectItemClicked()),this,SLOT(ElecDevItemClicked));
+	m_3D_show = new ElecDeviceShowWidget();
+	m_tabWidget->addTab(m_3D_show, tr("3D 显示"));
 }
 
 
@@ -6226,7 +6228,7 @@ void MainWindow::on_actionRemotecontrol_triggered()
 
 void MainWindow::ElecDevItemClicked(int j)
 {
-//    QMessageBox::information(this,"友情提示",QString("%1").arg(i));   薛定谔的代码？解除注释有惊喜
+    //QMessageBox::information(this,"友情提示",QString("%1").arg(i));  // 薛定谔的代码？解除注释有惊喜
     LoopDo64Device();		//组织DO64的数据包并输出
     LoopDmx512Device();		//组织DMX512的数据包并输出
 }

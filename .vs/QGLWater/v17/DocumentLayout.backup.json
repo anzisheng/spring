@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CommonFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CommonFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:MusicWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\build\\x64\\objs\\moc\\moc_mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:build\\x64\\objs\\moc\\moc_mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CommonFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CommonFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\build\\x64\\objs\\moc\\moc_MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:build\\x64\\objs\\moc\\moc_MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:StaticValue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWATER-SRC-2026-01-16_SL40 - CLOCK\\SRC-2026-01-16\\CONFIG.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CONFIG.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:MusicGraphicsView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\build\\x64\\objs\\moc\\moc_mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:build\\x64\\objs\\moc\\moc_mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\ClockDialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -57,10 +65,6 @@
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:aosetting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:StaticValue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:StaticValue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -75,10 +79,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QOutPutDialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:QOutPutDialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:MusicWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\winperformance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -108,7 +108,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -116,33 +116,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "mainwindow.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeDocumentMoniker": "mainwindow.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeToolTip": "mainwindow.cpp",
-              "ViewState": "AgIAAEkIAAAAAAAAAAAAAEkIAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEMCAAAAAAAAAAAuwEsCAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-16T03:44:33.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MusicGraphicsView.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicGraphicsView.cpp",
               "RelativeDocumentMoniker": "MusicGraphicsView.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicGraphicsView.cpp",
               "RelativeToolTip": "MusicGraphicsView.cpp",
-              "ViewState": "AgIAAJ4DAAAAAAAAAAAewKoDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEMDAAAAAAAAAAArwFIDAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-19T01:23:51.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "QOutPutDialog.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QOutPutDialog.cpp",
               "RelativeDocumentMoniker": "QOutPutDialog.cpp",
@@ -154,19 +154,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "config.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h",
               "RelativeDocumentMoniker": "config.h",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\config.h",
               "RelativeToolTip": "config.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-23T07:50:59.502Z"
+              "WhenOpened": "2026-03-23T07:50:59.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CommonFile.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CommonFile.h",
               "RelativeDocumentMoniker": "CommonFile.h",
@@ -174,11 +175,12 @@
               "RelativeToolTip": "CommonFile.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-16T07:18:04.027Z"
+              "WhenOpened": "2026-03-16T07:18:04.027Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "moc_MusicGraphicsView.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\build\\x64\\objs\\moc\\moc_MusicGraphicsView.cpp",
               "RelativeDocumentMoniker": "build\\x64\\objs\\moc\\moc_MusicGraphicsView.cpp",
@@ -186,23 +188,64 @@
               "RelativeToolTip": "build\\x64\\objs\\moc\\moc_MusicGraphicsView.cpp",
               "ViewState": "AgIAAKYAAAAAAAAAAAAewL4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-27T09:18:24.849Z"
+              "WhenOpened": "2026-03-27T09:18:24.849Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "MusicWidget.cpp",
+              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp",
+              "RelativeDocumentMoniker": "MusicWidget.cpp",
+              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp",
+              "RelativeToolTip": "MusicWidget.cpp",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAgwM8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-16T07:16:31.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "mainwindow.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.h",
               "RelativeDocumentMoniker": "mainwindow.h",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.h",
               "RelativeToolTip": "mainwindow.h",
-              "ViewState": "AgIAAPcAAAAAAAAAAAAewAMBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAAAO8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-16T05:29:13.024Z"
+              "WhenOpened": "2026-03-16T05:29:13.024Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "CollidingRectItem.cpp",
+              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
+              "RelativeDocumentMoniker": "CollidingRectItem.cpp",
+              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
+              "RelativeToolTip": "CollidingRectItem.cpp",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-17T08:25:22.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaticValue.h",
+              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h",
+              "RelativeDocumentMoniker": "StaticValue.h",
+              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h",
+              "RelativeToolTip": "StaticValue.h",
+              "ViewState": "AgIAADsAAAAAAAAAAAASwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-23T04:53:25.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "moc_mainwindow.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\build\\x64\\objs\\moc\\moc_mainwindow.cpp",
               "RelativeDocumentMoniker": "build\\x64\\objs\\moc\\moc_mainwindow.cpp",
@@ -214,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "QSubTreeView.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
               "RelativeDocumentMoniker": "QSubTreeView.cpp",
@@ -227,20 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CollidingRectItem.cpp",
-              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
-              "RelativeDocumentMoniker": "CollidingRectItem.cpp",
-              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
-              "RelativeToolTip": "CollidingRectItem.cpp",
-              "ViewState": "AgIAAI0BAAAAAAAAAAAgwJoBAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-17T08:25:22.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "qlist.h",
               "DocumentMoniker": "F:\\Qt\\6.8.3\\msvc2022_64\\include\\QtCore\\qlist.h",
               "ToolTip": "F:\\Qt\\6.8.3\\msvc2022_64\\include\\QtCore\\qlist.h",
@@ -262,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DMXLightDialog.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\DMXLightDialog.cpp",
               "RelativeDocumentMoniker": "DMXLightDialog.cpp",
@@ -274,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "xtree",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\xtree",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\xtree",
@@ -284,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ClockDialog.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\ClockDialog.cpp",
               "RelativeDocumentMoniker": "ClockDialog.cpp",
@@ -296,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -308,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "aosetting.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\aosetting.h",
               "RelativeDocumentMoniker": "aosetting.h",
@@ -320,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "StaticValue.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.cpp",
               "RelativeDocumentMoniker": "StaticValue.cpp",
@@ -332,19 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "StaticValue.h",
-              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h",
-              "RelativeDocumentMoniker": "StaticValue.h",
-              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\StaticValue.h",
-              "RelativeToolTip": "StaticValue.h",
-              "ViewState": "AgIAADUAAAAAAAAAAAAMwEIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-23T04:53:25.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ClassDefined.h",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\ClassDefined.h",
               "RelativeDocumentMoniker": "ClassDefined.h",
@@ -353,18 +371,6 @@
               "ViewState": "AgIAAEYAAAAAAAAAAAAawFEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-16T07:50:39.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MusicWidget.cpp",
-              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp",
-              "RelativeDocumentMoniker": "MusicWidget.cpp",
-              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\MusicWidget.cpp",
-              "RelativeToolTip": "MusicWidget.cpp",
-              "ViewState": "AgIAAIsBAAAAAAAAAAAuwJgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T07:16:31.414Z"
             },
             {
               "$type": "Document",

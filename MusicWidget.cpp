@@ -238,7 +238,7 @@ void MusicWidget::InitData(MusicInfo* music_info)
 		QPen(Qt::black), QBrush(QColor(181, 170, 232)));
 
 	QGraphicsTextItem* device_name =
-		sceneBase->addText(tr("编队名"));
+		sceneBase->addText(tr("编队aaa名"));
 	device_name->setFont(font);
 	device_name->setPos(0, m_NextLinePosY);
 	device_name->setParentItem(header);

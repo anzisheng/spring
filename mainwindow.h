@@ -237,6 +237,7 @@ private:
     QMap<int,ElecDeviceRectItem*> m_elecDeviceMap;  //电气设备显示列表
 
     ElecDeviceShowWidget* m_elec_show;     //电气设备和灯光设备展示窗体
+    ElecDeviceShowWidget* m_3D_show;
 
     int screen_width;
     int screen_height;
