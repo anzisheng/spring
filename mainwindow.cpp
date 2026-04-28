@@ -590,6 +590,7 @@ void MainWindow::InitElecDeviceInfo()
 	connect(m_elec_show,SIGNAL(ElecDeviceShowWidget::RectItemClicked()),this,SLOT(ElecDevItemClicked));
 	m_3D_show = new WaterCurtainWidget(this);
 	m_tabWidget->addTab(m_3D_show, tr("3D 显示"));
+	m_3D_show->loadCurtainTexture("pictures/note.bmp");
 }
 
 

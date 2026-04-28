@@ -51,12 +51,14 @@ void WaterCurtainWidget::setParticleCount(int count)
 bool WaterCurtainWidget::shouldSpawnAt(float x, float z) const
 {
     if (m_curtainImage.isNull()) {
+        // 默认心形图案
         float heartX = x / 2.5f;
         float heartZ = z / 2.0f;
         float heartFormula = pow(heartX * heartX + heartZ * heartZ - 1, 3) - heartX * heartX * heartZ * heartZ * heartZ;
         return heartFormula < 0;
     }
 
+    // 将世界坐标映射到图片坐标
     float u = (x + 5.0f) / 10.0f;
     float v = (z + 4.0f) / 8.0f;
 
@@ -68,6 +70,7 @@ bool WaterCurtainWidget::shouldSpawnAt(float x, float z) const
     int gray = qGray(m_curtainImage.pixel(ix, iy));
     float density = gray / 255.0f;
 
+    // 密度大于0.2的区域放置粒子
     return density > 0.2f;
 }
 
@@ -105,10 +108,12 @@ void WaterCurtainWidget::initParticles()
 
     m_particleCount = m_particles.size();
     qDebug() << "Initialized" << m_particleCount << "particles";
+    qDebug() << "Press SPACE to start falling";
 }
 
 void WaterCurtainWidget::startFalling()
 {
+    // 重置所有粒子到顶部，准备下落
     for (int i = 0; i < m_particles.size(); ++i) {
         m_particles[i].active = true;
         m_particles[i].y = 4.5f;
@@ -123,6 +128,7 @@ void WaterCurtainWidget::keyPressEvent(QKeyEvent* event)
 {
     if (event->key() == Qt::Key_Space) {
         if (m_isFalling) {
+            // 如果正在下落，重置重新开始
             for (int i = 0; i < m_particles.size(); ++i) {
                 m_particles[i].active = true;
                 m_particles[i].y = 4.5f;
@@ -150,7 +156,7 @@ void WaterCurtainWidget::updateParticles()
     if (deltaTime > 0.033f) deltaTime = 0.033f;
     if (deltaTime < 0.001f) deltaTime = 0.016f;
 
-    float gravity = 45.0f;
+    float gravity = 45.0f;  // 快速下落
 
     int activeCount = 0;
 
@@ -171,9 +177,10 @@ void WaterCurtainWidget::updateParticles()
         }
     }
 
+    // 所有粒子都消失了，停止下落状态
     if (activeCount == 0 && m_isFalling) {
         m_isFalling = false;
-        qDebug() << "All particles have fallen!";
+        qDebug() << "All particles have fallen! Press SPACE to reset";
     }
 
     update();
@@ -184,11 +191,13 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
+    // 深色背景
     painter.fillRect(rect(), QColor(5, 5, 15));
 
     int w = width();
     int h = height();
 
+    // 计算显示区域（让BMP显示适中大小）
     float marginX = w * 0.18f;
     float marginY = h * 0.18f;
     float drawW = w - 2 * marginX;
@@ -199,6 +208,7 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
 
     int activeCount = 0;
 
+    // 绘制所有活跃粒子
     for (const auto& p : m_particles) {
         if (!p.active) continue;
         activeCount++;
@@ -206,17 +216,11 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
         // 屏幕X坐标
         float screenX = marginX + (p.x + 5.0f) * scaleX;
 
-        // 基础Y坐标（根据Z）
-        float baseY = marginY + (4.0f - p.z) * scaleZ;
-
+        // 屏幕Y坐标（下落时Y影响位置）
         float screenY;
         if (m_isFalling) {
-            // 基础Y位置（根据Z）
             float baseY = marginY + (4.0f - p.z) * scaleZ;
-            // 下落偏移：Y值从4.5降到-5，偏移量从0增加到最大值
-            float t = (4.5f - p.y) / 9.5f;  // p.y=4.5时t=0，p.y=-5时t=1
-            t = qBound(0.0f, t, 1.0f);
-            float yOffset = t * drawH * 0.5f;  // 最大偏移屏幕高度的50%
+            float yOffset = (p.y) * (scaleZ * 0.12f);
             screenY = baseY + yOffset;
         }
         else {
@@ -225,6 +229,7 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
 
         if (screenX < -20 || screenX > w + 20 || screenY < -20 || screenY > h + 20) continue;
 
+        // 获取BMP密度（用于颜色和大小）
         float density = 0.5f;
         if (!m_curtainImage.isNull()) {
             float u = (p.x + 5.0f) / 10.0f;
@@ -238,26 +243,29 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
 
         density = qBound(0.15f, density, 1.0f);
 
-        float size = 2.5f + density * 4.5f;
+        // 粒子大小：密度高的区域粒子稍大
+        float size = 2.2f + density * 4.5f;
 
+        // 颜色：水蓝色，密度越高越亮
         int r = 40 + (int)(density * 70);
         int g = 90 + (int)(density * 90);
         int b = 170 + (int)(density * 85);
 
+        // 透明度
         int alpha = 200;
         if (m_isFalling) {
-            // 下落越远越透明
-            float heightFactor = (p.y + 5.0f) / 9.5f;
-            heightFactor = qBound(0.2f, heightFactor, 1.0f);
-            alpha = 100 + (int)(heightFactor * 100);
+            float heightFactor = (p.y + 4.0f) / 8.5f;
+            heightFactor = qBound(0.25f, heightFactor, 1.0f);
+            alpha = 130 + (int)(heightFactor * 90);
         }
-        alpha = qBound(80, alpha, 240);
+        alpha = qBound(100, alpha, 240);
 
         painter.setBrush(QColor(r, g, b, alpha));
         painter.setPen(Qt::NoPen);
         painter.drawEllipse(QPointF(screenX, screenY), size, size);
     }
 
+    // 显示信息
     painter.setPen(Qt::white);
     painter.setFont(QFont("Arial", 11));
     painter.drawText(10, 25, "Water Curtain - BMP Shape Falling Effect");
@@ -268,8 +276,10 @@ void WaterCurtainWidget::paintEvent(QPaintEvent* event)
     }
     else {
         painter.drawText(10, 71, "No BMP - Using heart shape");
+        painter.drawText(10, 94, "Place 'water_curtain.bmp' in program folder");
     }
 
+    // 状态提示
     if (m_isFalling) {
         painter.setPen(QColor(0, 255, 100));
         painter.drawText(10, 130, "▼ FALLING - Press SPACE to reset");
