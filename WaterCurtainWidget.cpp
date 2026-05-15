@@ -29,7 +29,7 @@ WaterCurtainWidget::~WaterCurtainWidget()
 
 bool WaterCurtainWidget::loadCurtainTexture(const QString& filepath)
 {
-    if (m_curtainImage.load("pictures/note.bmp")) {
+    if (m_curtainImage.load(filepath)) {
         m_curtainImage = m_curtainImage.convertToFormat(QImage::Format_Grayscale8);
         m_curtainWidth = m_curtainImage.width();
         m_curtainHeight = m_curtainImage.height();

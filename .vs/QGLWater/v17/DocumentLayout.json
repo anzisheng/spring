@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:mainwindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\WaterCurtainWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:WaterCurtainWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:CollidingRectItem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\WaterCurtainWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|solutionrelative:WaterCurtainWidget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AF31618-6D04-3BE4-8BDF-4505F8A64124}|QGLWater.vcxproj|D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\SelectImageDialog.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,36 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CollidingRectItem.cpp",
-              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
-              "RelativeDocumentMoniker": "CollidingRectItem.cpp",
-              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
-              "RelativeToolTip": "CollidingRectItem.cpp",
-              "ViewState": "AgIAAOAAAAAAAAAAAADgv+cAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-15T06:28:29.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QSubTreeView.cpp",
-              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
-              "RelativeDocumentMoniker": "QSubTreeView.cpp",
-              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
-              "RelativeToolTip": "QSubTreeView.cpp",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAcwIYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-15T06:08:55.038Z"
             },
             {
               "$type": "Document",
@@ -131,27 +106,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "mainwindow.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeDocumentMoniker": "mainwindow.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\mainwindow.cpp",
               "RelativeToolTip": "mainwindow.cpp",
-              "ViewState": "AgIAAL4WAAAAAAAAAAAiwMQWAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAEsCAAAAAAAAAAAmwFACAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-28T06:20:52.332Z"
+              "WhenOpened": "2026-04-28T06:20:52.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "WaterCurtainWidget.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\WaterCurtainWidget.cpp",
               "RelativeDocumentMoniker": "WaterCurtainWidget.cpp",
               "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\WaterCurtainWidget.cpp",
               "RelativeToolTip": "WaterCurtainWidget.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAhwCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvyEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-28T06:30:31.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CollidingRectItem.cpp",
+              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
+              "RelativeDocumentMoniker": "CollidingRectItem.cpp",
+              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\CollidingRectItem.cpp",
+              "RelativeToolTip": "CollidingRectItem.cpp",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAuwOwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-15T06:28:29.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QSubTreeView.cpp",
+              "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
+              "RelativeDocumentMoniker": "QSubTreeView.cpp",
+              "ToolTip": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\QSubTreeView.cpp",
+              "RelativeToolTip": "QSubTreeView.cpp",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwIYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-15T06:08:55.038Z"
             },
             {
               "$type": "Document",
@@ -191,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\SCR\\QGLWater-Src-2026-01-16_SL40 - Clock\\Src-2026-01-16\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
