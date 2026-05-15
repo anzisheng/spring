@@ -590,9 +590,10 @@ void MainWindow::InitElecDeviceInfo()
 	connect(m_elec_show,SIGNAL(ElecDeviceShowWidget::RectItemClicked()),this,SLOT(ElecDevItemClicked));
 	m_3D_show = new WaterCurtainWidget(this);
 	m_tabWidget->addTab(m_3D_show, tr("3D 显示"));
-	m_3D_show->loadCurtainTexture("pictures/note.bmp");
+	m_3D_show->m_curtainImage = QImage("./pictures/note.bmp");
+	m_3D_show->loadCurtainTexture(tr("./pictures/note.bmp"));
+	                              //pictures
 }
-
 
 //enum TreeType
 //{OUTPUT_DEVICE,ELECTRIC_DEVICE,SHOWTEAMS_DEVICE,ORBIT_DEVICE,OUTLINE_DEVICE};

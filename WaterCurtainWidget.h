@@ -16,6 +16,7 @@ public:
 
     bool loadCurtainTexture(const QString& filepath);
     void setParticleCount(int count);
+    QImage m_curtainImage;
 
 protected:
     void paintEvent(QPaintEvent* event) override;
@@ -42,7 +43,7 @@ private:
     float m_lastTime;
     bool m_isFalling;    // 是否正在下落
 
-    QImage m_curtainImage;
+   
     int m_curtainWidth;
     int m_curtainHeight;
 };
