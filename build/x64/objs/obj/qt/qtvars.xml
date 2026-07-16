@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
         <Qt_DEFINES_>_WINDOWS;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CONCURRENT_LIB;QT_SQL_LIB;QT_CORE_LIB</Qt_DEFINES_>
-    <Qt_INCLUDEPATH_>"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\obj\qt\qmake\807896f2349d4c169393bddbd3704e4f";F:\Qt\6.8.3\msvc2022_64\include;F:\Qt\6.8.3\msvc2022_64\include\QtPrintSupport;F:\Qt\6.8.3\msvc2022_64\include\QtWidgets;F:\Qt\6.8.3\msvc2022_64\include\QtGui;F:\Qt\6.8.3\msvc2022_64\include\QtNetwork;F:\Qt\6.8.3\msvc2022_64\include\QtConcurrent;F:\Qt\6.8.3\msvc2022_64\include\QtSql;F:\Qt\6.8.3\msvc2022_64\include\QtCore;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\obj\qt\qmake\807896f2349d4c169393bddbd3704e4f";F:\Qt\6.8.3\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
+    <Qt_INCLUDEPATH_>"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\obj\qt\qmake\ee2ff6b96ac54c27bc1956b65c497660";F:\Qt\6.8.3\msvc2022_64\include;F:\Qt\6.8.3\msvc2022_64\include\QtPrintSupport;F:\Qt\6.8.3\msvc2022_64\include\QtWidgets;F:\Qt\6.8.3\msvc2022_64\include\QtGui;F:\Qt\6.8.3\msvc2022_64\include\QtNetwork;F:\Qt\6.8.3\msvc2022_64\include\QtConcurrent;F:\Qt\6.8.3\msvc2022_64\include\QtSql;F:\Qt\6.8.3\msvc2022_64\include\QtCore;"D:\SCR\QGLWater-Src-2026-01-16_SL40 - Clock\Src-2026-01-16\build\x64\objs\obj\qt\qmake\ee2ff6b96ac54c27bc1956b65c497660";F:\Qt\6.8.3\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
     <Qt_STDCPP_>stdcpp17</Qt_STDCPP_>
     <Qt_RUNTIME_>MultiThreadedDebugDLL</Qt_RUNTIME_>
     <Qt_CL_OPTIONS_>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8</Qt_CL_OPTIONS_>
@@ -32,7 +32,7 @@
     <QMake_QMAKE_XSPEC_>win32-msvc</QMake_QMAKE_XSPEC_>
     <QMake_QMAKE_VERSION_>3.1</QMake_QMAKE_VERSION_>
     <QMake_QT_VERSION_>6.8.3</QMake_QT_VERSION_>
-    <QtBkup_QtHash>jZFBbsQwCEWvwg1SpetZOIa6dBzsAu5oVI3m/reoE6WK1E298Mb89+HDNyOJs98vq33F+WWen68zxKIEqTEI+a3oFW6Midx6QWJT7QhUZXFrtRZ1sM8MC8v+kN5YyC5T1fJB0Sd2WvdPdi6StLQ6xRzLWjlTV1EXRjIreqoMWGJuSDX4+6hVQNxbhHzAyNoHKMpkYI6x1lGrHCS1kMg8CAZF0NbXtNIof8gzLxr0DjE/S93SD6/lzHKA0L3+oXvs63SCfXkk/bxxi7/Vxmb44/LbHmlp6fED</QtBkup_QtHash>
+    <QtBkup_QtHash>jZFBTsQwDEWv4hsUVYjdLFLbBDOpExyH0Qihuf8tSKuiSmzIIpv4v29/+0uI1cXvl7V+4vw0z4+XZ8BsDLEJKPst2xVuQpG99oJiM+sIFBP12krJ5lA/Eiyi+yN+FeV6mYrld0afxHndP8Ula7TcyoQJ81okcVdxFyLXmu1UVRDF1IhL8LdRq0C0twjpgEmsD5BNuEJ1wlJGrVLQ2ELk6kEpGIG1vqaVR/lDnmSxYHfA9MhlSz+8ljPLAUL3+ofusa/TCfblsfbz4hZ/q43N8Mfltz3x0uL3Dw==</QtBkup_QtHash>
     <QtVersion>6.8.3</QtVersion>
     <QtVersionMajor>6</QtVersionMajor>
     <QtVersionMinor>8</QtVersionMinor>

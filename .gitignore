@@ -78,3 +78,6 @@ build/
 *.pro
 *.filer
 *.vcproj
+*.json
+*.xml
+*.vcproj
